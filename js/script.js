@@ -9,21 +9,21 @@ const todos = [
     "Go to the post office"
   ];
   
-  const button = document.querySelector(".show-todo");
-  const todoList = document.QuerySelector(".todos");
+  const button = document.querySelector(".show-todos");
+  const todoList = document.querySelector(".todos");
   
   const showTodos = function () {
     todos.forEach(function (todo) {
       const li = document.createElement("li");
-      li.innerHTML(todo);
+      li.innerHTML = todo;
       todoList.append(li);
     });
     todoList.classList.remove("hide");
-    button.innerText = "Hide To-Dos";
+    button.innerText= "Hide To-Dos";
   };
   
   button.addEventListener("click", function () {
-    if (todolist.classList.contains("hide")) {
+    if (todoList.classList.contains("hide")) {
       showTodos();
     } else {
       button.innerText = "Show me!";
